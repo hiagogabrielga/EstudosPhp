@@ -1,0 +1,35 @@
+header{
+    background-color: rgb(27, 26, 26);
+    box-shadow: 0 4px 0 rgb(145, 63, 145);
+    
+}
+
+h1#tituloDeBoasVindas{
+    text-align: center;
+    color: rgb(223, 223, 51);
+    padding-top: 1%;
+}
+
+ul.ulNav{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(161, 161, 45);
+    padding: 1% 0;
+    border: solid 1px black;
+}
+
+ul.ulNav>li{
+    margin: 0 2%;
+    list-style-type: none;
+    font-size: 15pt;
+}
+
+ul.ulNav>li>a{
+    text-decoration: none;
+    color: black;
+}
+
+nav.barraLateral{
+    background-color: rgb(192, 207, 50);
+    width: 20vw;
+}

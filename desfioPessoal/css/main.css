@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: flex;
+}
+div.divImgSinopse>img{
+    width: 30%;
+    margin: 5% 0 2% 2%;
+    object-fit: cover;
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+
+
+div.conteudoCentral{
+    background-color: gray;
+    height: auto;
+    width: 80vw;
+
+}
+
+div.livros{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 7%;
+    
+}
+
+div.divTituloImgSinopse{
+    border: solid 1px;
+    border-radius: 25px;
+    width: 40%;
+    text-align: center;
+    margin: 2%;
+    padding: 1%;
+    background-color: gray;
+
+}
+
+div.sinopse{
+    margin: 0 2%;
+}
+
+div.sinopse>h3{
+    margin-top: 5%;
+}
+
+div.sinopse>p{
+    text-align: justify;
+}
+
+div.divAdicionarLivro{
+    background-color: black;
+}
