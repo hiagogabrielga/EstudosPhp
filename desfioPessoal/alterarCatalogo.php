@@ -1,11 +1,11 @@
-<?php
+<?php 
 include("barraLateral.php");
 if (isset($_POST["filtroCategoria"])) {
     if (($_POST["filtroCategoria"]) != "") {
         $filtrarCategoria = $_POST["filtroCategoria"];
         $sql = "SELECT * FROM livro WHERE categoria = \"$filtrarCategoria\"";
     } else $sql = "SELECT * FROM livro ORDER BY nomeLivro ASC;";
-}else $sql = "SELECT * FROM livro ORDER BY nomeLivro ASC;";
+} else $sql = "SELECT * FROM livro ORDER BY nomeLivro ASC;";
 
 $res = $conn->query($sql);
 $qtd = $res->num_rows;
@@ -25,6 +25,9 @@ if ($qtd > 0) {
         print "<h3>Sinopse</h3>";
         print "<p>$row->sinopseLivro</p>";
         print "</div>";
+        print "<button onclick=\"location.href='?page=editar&idLivro=" . $row->idLivro . "'\" id=\"botaoEditar\">Editar</button>
+
+        <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&idLivro=" . $row->idLivro . "';}else{false}\" id=\"botaoExcluir\">Excluir</button>";
         print "</div>";
         print "</div>";
     };
@@ -33,3 +36,5 @@ if ($qtd > 0) {
 };
 print "</div>";
 print "</div>";
+
+?>

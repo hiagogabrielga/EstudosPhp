@@ -6,6 +6,8 @@
 
 main{
     display: flex;
+    background-color: rgb(215, 215, 215);
+
 }
 div.divImgSinopse>img{
     width: 30%;
@@ -18,10 +20,13 @@ div.divImgSinopse>img{
 
 
 div.conteudoCentral{
-    background-color: gray;
     height: auto;
     width: 80vw;
+}
 
+div#janelaCentral{
+    margin: 0 30%;
+    border:solid 1px;
 }
 
 div.livros{
@@ -54,6 +59,73 @@ div.sinopse>p{
     text-align: justify;
 }
 
-div.divAdicionarLivro{
-    background-color: black;
+div.telaAdicionarLivros {
+    background-color: gray;
+    width: 40vw;
+}
+
+h2#tituloAdicionarLivro {
+    padding: 2% 0;
+    text-align: center;
+}
+
+div#campoUploadImagem {
+    text-align: left;
+}
+
+div#enviadiv{
+    text-align: center;
+    
+}
+div#enviadiv>button{
+    color: white;
+    font-weight: bolder;
+    background-color: green;
+    border: solid;
+    margin: 2% 0;
+    padding: 2% 3%;
+    border-radius: 45px;
+    transition: 0.5s;
+}
+
+div#enviadiv>button:hover{
+    color: rgb(85, 85, 85);
+    background-color: rgb(4, 48, 4);
+}
+
+.campoDePreencimento{
+    margin: 3% 2%;
+    font-size: 4vh;
+}
+
+#botaoEditar{
+    color: white;
+    font-weight: bolder;
+    background-color: green;
+    border: solid;
+    margin: 2% 0;
+    padding: 2% 3%;
+    border-radius: 45px;
+    transition: 0.5s;
+}
+
+#botaoEditar:hover{
+    color: rgb(85, 85, 85);
+    background-color: rgb(4, 48, 4);
+}
+
+#botaoExcluir{
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(207, 22, 22);
+    border: solid;
+    margin: 2% 0;
+    padding: 2% 3%;
+    border-radius: 45px;
+    transition: 0.5s;
+}
+
+#botaoExcluir:hover{
+    color: rgb(85, 85, 85);
+    background-color: rgb(92, 6, 6);
 }

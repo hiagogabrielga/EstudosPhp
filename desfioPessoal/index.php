@@ -33,7 +33,7 @@
                     <a href="?page=novo"><i class="bi bi-plus-square"> Adicionar Livro</i></a></a>
                 </li>
                 <li>
-                    <a href="?page=listar"><i class="bi bi-clipboard2-pulse-fill"> Alterar catálogo</i></a>
+                    <a href="?page=alterar"><i class="bi bi-clipboard2-pulse-fill"> Alterar catálogo</i></a>
                 </li>
 
                 <li>
@@ -52,9 +52,7 @@
         include("config.php");
         switch (@$_REQUEST["page"]) {
             case "novo":
-                print "<div class=\"divAdicionarLivro\">";
-                    include("adicionar-livro.php");
-                print "</div>";
+                include("adicionar-livro.php");
                 break;
             case "listar":
                 include("listar-livro.php");
@@ -62,11 +60,14 @@
             case "salvar":
                 include("salvar-livro.php");
                 break;
+            case "alterar":
+                include("alterarCatalogo.php");
+                break;
             case "editar":
-                include("editar-usuario.php");
+                include("editar-livro.php");
                 break;
             default;
-                echo "<h1>Bem Vindo!</h1>";
+                include("listar-livro.php");
         };
 
         ?>
