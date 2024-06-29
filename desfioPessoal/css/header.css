@@ -32,4 +32,9 @@ ul.ulNav>li>a{
 nav.barraLateral{
     background-color: rgb(192, 207, 50);
     width: 20vw;
+    padding: 0% 3%;
+}
+
+nav.barraLateral>h3{
+    margin: 2% 0%;
 }

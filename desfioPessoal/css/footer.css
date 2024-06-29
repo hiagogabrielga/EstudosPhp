@@ -1,0 +1,40 @@
+footer{
+    background-color: rgb(15, 15, 15);
+    color: rgb(222, 221, 221);
+    border: solid black 3px;
+}
+
+footer>div>h2{
+    text-align: center;
+    padding: 2% 0;
+    font-size: 24pt;
+    
+}
+
+div>p{
+    font-size: 15pt;
+    margin: 1%;
+}
+.redesSociais{
+    background-color: rgb(22, 22, 22);
+}
+
+.redesSociais>h3{
+    box-shadow: 1px -10px rgba(0, 0, 0, 0.742);
+    text-align: center;
+    background-color: rgb(31, 30, 30);
+    padding: 1% 0;
+}
+
+li>span>a{
+    text-decoration: none;
+    margin: 5% 2%;
+    padding: 1%;
+    font-size: 15pt;
+    color: rgb(148, 145, 145);
+}
+
+#direitosAutorais{
+    text-align: center;
+    padding: 1%;
+}

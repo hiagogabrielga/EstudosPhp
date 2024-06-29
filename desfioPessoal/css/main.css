@@ -24,6 +24,19 @@ div.conteudoCentral{
     width: 80vw;
 }
 
+div.conteudoCentralHome{
+    height: auto;
+    width: 100vw;
+}
+h2#mensagemHome{
+    background-color: black;
+    color: rgb(191, 191, 191);
+    text-align: center;
+    padding: 2% 0;
+    font-size: 25pt;
+}
+
+
 div#janelaCentral{
     margin: 0 30%;
     border:solid 1px;
@@ -35,7 +48,6 @@ div.livros{
     margin-left: 7%;
     
 }
-
 div.divTituloImgSinopse{
     border: solid 1px;
     border-radius: 25px;
@@ -128,4 +140,20 @@ div#enviadiv>button:hover{
 #botaoExcluir:hover{
     color: rgb(85, 85, 85);
     background-color: rgb(92, 6, 6);
+}
+
+.conteudoExplicativo {
+    text-align: center;
+    font-size: 15pt;
+    padding: 2% 15%;
+}
+
+.conteudoExplicativo>p>a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.conteudoExplicativo>p {
+    margin: 5% 15%;
 }

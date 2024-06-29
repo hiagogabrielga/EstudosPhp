@@ -1,6 +1,6 @@
 <nav class="barraLateral">;
     <h3>
-        Filtros
+        Filtrar
     </h3>
     <form action="?page=listar" method="POST">
         <label>Categoria do Livro</label>
