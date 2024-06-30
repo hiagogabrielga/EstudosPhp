@@ -3,7 +3,7 @@ switch ($_REQUEST["acao"]) {
     case 'cadastrarUsuario':
         $nome = $_POST["nome"];
         $email = $_POST["email"];
-        $senha = md5($_POST["senha"]);
+        $senha = $_POST["senha"];
         $data_nasc = $_POST["data_nasc"];
         $adm = $_POST["adm"];
 
@@ -18,11 +18,22 @@ switch ($_REQUEST["acao"]) {
             echo "<script>alert('Não foi possivel castrar');</script>";
             echo "<script>location.href='?page=listar';</script>";
         };
+
+        $usuario = $res->fetch_assoc();
+        if(!isset($_SESSION)) {
+            session_start();
+        }
+        
+        $_SESSION['id'] = $usuario['id'];
+        $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['adm'] = $usuario['adm'];
+        
+        header("Location: home.php");
         break;
     case 'editar':
         $nome = $_POST["nome"];
         $email = $_POST["email"];
-        $senha = md5($_POST["senha"]);
+        $senha = $_POST["senha"];
         $data_nasc = $_POST["data_nasc"];
         $adm = $_POST["administrador"];
 

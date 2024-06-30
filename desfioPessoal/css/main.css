@@ -157,3 +157,75 @@ div#enviadiv>button:hover{
 .conteudoExplicativo>p {
     margin: 5% 15%;
 }
+
+
+#btnCriarconta{
+    text-decoration: none;
+    font-weight: bolder;
+    background-color: rgb(22, 62, 207);
+    border: solid 2px;
+
+}
+
+#btnCriarconta:hover{
+
+    background-color: rgb(4, 48, 4);
+}
+
+
+.inputCadastro{
+    font-size: 18pt;
+    margin: 6% 1%;
+}
+.inputCadastro>input{
+    font-size: 19pt;
+
+}
+.inputCadastro>select{
+    font-size: 19pt;
+}
+
+.conteuLogarCriar {
+    padding: 2%;
+    display: block;
+    font-size: 15pt;
+    text-align: center;
+    width: 100%;
+}
+
+.criarLogar {
+    box-shadow: 1px -45px rgba(0, 0, 0, 0.742);
+    border-radius: 25px;
+    margin: 5% 0;
+}
+
+.criarLogar>a {
+    margin: 7%;
+}
+
+#btnCriarconta {
+    border: solid 5px;
+    border-radius: 25px;
+    padding: 1%;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
+
+#btnLogarconta {
+    border: solid 5px;
+    border-radius: 25px;
+    padding: 1%;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
+
+#btnSairconta{
+    border: solid 5px;
+    border-radius: 25px;
+    padding: 1%;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}

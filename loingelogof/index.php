@@ -1,4 +1,5 @@
 <?php 
+include('config.php');
 
 if(isset($_POST['email']) || isset($_POST['email'])) {
     if(strlen($_POST['email'])==0) {
@@ -9,7 +10,7 @@ if(isset($_POST['email']) || isset($_POST['email'])) {
         $email = $conn->real_escape_string($_POST['email']);
         $senha = $conn->real_escape_string($_POST['senha']);
 
-        $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+        $sql = "SELECT * FROM cadastros WHERE email = '$email' AND senha = '$senha'";
         $sqlQuery = $conn ->query($sql) or die("Flanha na execução do codigo SQL: ". $conn->error);
         $quantidade = $sqlQuery ->num_rows;
 
@@ -21,9 +22,8 @@ if(isset($_POST['email']) || isset($_POST['email'])) {
             
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
-            $_SESSION['adm'] = $usuario['adm'];
 
-            header("Location: index.php");
+            header("Location: painel.php");
         } else {
             echo "Falha ao logar, senha ou email incorretos";
         };
@@ -31,22 +31,29 @@ if(isset($_POST['email']) || isset($_POST['email'])) {
 };
 ?>
 
-<div id="janelaCentral">
-    <div class="telaAdicionarLivros">
-        <h2 id="tituloAdicionarLivro">Logar</h2>
-        <form action="" method="POST">
-            <div class="inputCadastro">
-                <label>E-mail: </label>
-                <input type="email" name="email" class="form-control">
-            </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Acesse sua conta</h1>
+    <form action="" method="POST">
+        <p>
+            <label>E-mail</label>
+            <input type="text" name="email" id="emial">
+        </p>
 
-            <div class="inputCadastro">
-                <label>Senha: </label>
-                <input type="password" name="senha" class="form-control" required>
-            </div>
+        <p>
+            <label>Senha</label>
+            <input type="password" name="senha" id="senha">
+        </p>
 
-            <div id="enviadiv">
-                <button type="submit" class="btn btn-primary">Logar</button>
-            </div>
-        </form>
-    </div>
+        <p>
+            <button type="submit">Entrar</button>
+        </p>
+    </form>
+</body>
+</html>

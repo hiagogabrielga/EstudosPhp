@@ -1,4 +1,5 @@
-<nav class="barraLateral">;
+<nav class="barraLateral">
+    <br>
     <h3>
         Filtrar
     </h3>

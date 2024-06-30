@@ -16,7 +16,16 @@
 
 <body>
     <header>
-        <h1 id="tituloDeBoasVindas">Bem vindo à Aviaras</h1>
+        <?php if (!isset($_SESSION)) {
+                    session_start();
+                }
+
+                if (!isset($_SESSION['id'])) {
+                    print "<h1 id=\"tituloDeBoasVindas\">Bem vindo à Aviaras</h1>";
+
+                } if (isset($_SESSION['id'])) {?> <h1 id="tituloDeBoasVindas">Bem vindo à Aviaras <?php print  explode(" ",$_SESSION['nome'])[0] . " ".explode(" ",$_SESSION['nome'])[count(explode(" ", $_SESSION['nome']))-1];?></h1><?php };?>
+        ?>
+
 
     </header>
     <nav class="barraSuperior">
@@ -29,18 +38,32 @@
                 <li>
                     <a href="?page=listar"><i class="bi bi-bookmark-fill"> Livros</i></a>
                 </li>
+                <?php
+                if (!isset($_SESSION)) {
+                    session_start();
+                }
 
-                <li>
-                    <a href="?page=novo"><i class="bi bi-bookmark-plus-fill"> Adicionar Livros</i></a></a>
+                if (!isset($_SESSION['id'])) {
+                    print "";
+                }else {?>
+                    <?php $adm = $_SESSION['adm'];?>
+                    <?php
+                    if ($adm == 1) {
+                        print "<li>
+                    <a href=\"?page=novo\"><i class=\"bi bi-bookmark-plus-fill\"> Adicionar Livros</i></a></a>
                 </li>
                 <li>
-                    <a href="?page=alterar"><i class="bi bi-clipboard2-pulse-fill"> Alterar catálogo</i></a>
-                </li>
+                    <a href=\"?page=alterar\"><i class=\"bi bi-clipboard2-pulse-fill\"> Alterar catálogo</i></a>
+                </li>";
+                    };
+                }
+
+
+                ?>
 
                 <li>
                     <a href="?page=sobre"><i class="bi bi-info-circle-fill"> Sobre</i></a>
                 </li>
-
                 <li>
                     <a href="?page=conta"><i class="bi bi-person-circle"> Conta</i></a>
                 </li>
@@ -55,7 +78,6 @@
             case "home":
                 include("home.php");
                 break;
-
             case "novo":
                 include("adicionar-livro.php");
                 break;
@@ -80,7 +102,6 @@
             case "criarConta":
                 include("criarConta.php");
                 break;
-
             case "logarConta":
                 include("logarConta.php");
                 break;
