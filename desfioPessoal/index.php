@@ -24,7 +24,6 @@
                     print "<h1 id=\"tituloDeBoasVindas\">Bem vindo à Aviaras</h1>";
 
                 } if (isset($_SESSION['id'])) {?> <h1 id="tituloDeBoasVindas">Bem vindo à Aviaras <?php print  explode(" ",$_SESSION['nome'])[0] . " ".explode(" ",$_SESSION['nome'])[count(explode(" ", $_SESSION['nome']))-1];?></h1><?php };?>
-        ?>
 
 
     </header>

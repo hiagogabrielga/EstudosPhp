@@ -23,7 +23,6 @@ switch ($_REQUEST["acao"]) {
         if(!isset($_SESSION)) {
             session_start();
         }
-        
         $_SESSION['id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];
         $_SESSION['adm'] = $usuario['adm'];
